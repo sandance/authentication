@@ -21,7 +21,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^account/', include('account.urls')),
+<<<<<<< HEAD
     url('soical-auth/',include('social.apps.django_app.urls', namespace='social')),
+=======
+    #url('social-auth/', 'social.apps.django_app.urls',name='social'),
+    url('social-auth/', include('social.apps.django_app.urls', namespace='social')),
+    url(r'^images', include('image.urls', namespace='images')),
+>>>>>>> 8e3bbc298c7cf01864cb4331255237e751fe8a62
 ]
 
 if settings.DEBUG:

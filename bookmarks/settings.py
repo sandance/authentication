@@ -45,9 +45,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'images',
     #'social.apps.django_app.default',
     #'social.backends.twitter.TwitterOAuth',
+=======
+    'social.apps.django_app.default',
+    'images',
+>>>>>>> 8e3bbc298c7cf01864cb4331255237e751fe8a62
 ]
 
 """
@@ -85,7 +90,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bookmarks.wsgi.application'
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+    'social.backends.facebook.Facebook20Auth2',
 
+)
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+SOCIAL_AUTH_FACEBOOK_KEY = 'XXX' # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = 'XXX' # Facebook App Secret
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
