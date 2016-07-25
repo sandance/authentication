@@ -45,8 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social.apps.django_app.default',
-    'social.backends.twitter.TwitterOAuth',
+    'images',
+    #'social.apps.django_app.default',
+    #'social.backends.twitter.TwitterOAuth',
 ]
 
 """
